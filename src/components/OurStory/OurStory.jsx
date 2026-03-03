@@ -1,5 +1,6 @@
 import React from "react";
 import storyimg from "../../assets/perfume1.png";
+import Heading from "../Heading/Heading";
 
 const OurStory = () => {
   return (
@@ -19,11 +20,8 @@ const OurStory = () => {
 
           {/* Content */}
           <div className="w-full max-w-[600px] m-12">
+             <Heading highlight=" Our Little Story"/>
             
-            <h1 className="pt-20 pb-4 pl-4 text-[#e2f2b0] text-[4.5rem] font-allura md:text-[4.5rem] text-[2.8rem] md:pt-20 md:pl-4">
-              Our Little Story
-            </h1>
-
             <p className="text-white text-[1.2rem] pb-7 md:text-[1.2rem] text-[1rem]">
               A timeless fragrance that speaks of grace, confidence, and charm —
               designed for those who believe in making every scent their signature.

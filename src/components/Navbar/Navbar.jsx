@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { IoHeartSharp } from "react-icons/io5";
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaShoppingCart } from "react-icons/fa";
 import { RiShoppingBag4Fill } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaUserAlt } from "react-icons/fa";
@@ -43,20 +43,23 @@ const Navbar = () => {
         <header className={`bg-black z-99 fixed top-0 left-0 right-0 ${isScrolled ? 'drop-shadow-[0_4px_25px_rgba(0,0,0,0.2)]' : ""} `}>
             <nav className={`max-w-350  flex m-auto md:h-[14vh] h-[12vh] px-10 items-center justify-between`}>
                 <div className="">
-                    <Link to="/" className='text-4xl text-white font-bold'>DEZEL</Link>
+                    <Link to="/" className='text-3xl text-white font-bold'>ZIVARA</Link>
                 </div>
-                <div className="md:flex hidden gap-8 text-2xl">
+                <div className="md:flex hidden gap-8 text-xl">
 
                     <NavLink to="/" className={({ isActive }) => `font-medium tracking-wider ${isActive ? "text-yellow-400" : "text-white hover:text-yellow-400" }`} >
                         Home
                     </NavLink>
 
                     <NavLink to="/perfume" className={({ isActive }) => `font-medium tracking-wider ${isActive ? "text-yellow-400" : "text-white hover:text-yellow-400" }`} >
-                        Perfume
+                        All Products 
                     </NavLink>
 
                     <NavLink to="/Contact" className={({ isActive }) => `font-medium tracking-wider ${isActive ? "text-yellow-400" : "text-white hover:text-yellow-400" }`} >
-                        Contact Us
+                       Categories 
+                    </NavLink>
+                    <NavLink to="/Contact" className={({ isActive }) => `font-medium tracking-wider ${isActive ? "text-yellow-400" : "text-white hover:text-yellow-400" }`} >
+                       Contact 
                     </NavLink>
 
                 </div>
@@ -85,7 +88,7 @@ const Navbar = () => {
 
                     {/* cart */}
                     <Link to='/cart' className='text-white relative text-3xl'>
-                        <RiShoppingBag4Fill />
+                        <FaShoppingCart />
                         {
                             cartCount > 0 &&
                             <span className='flex justify-center items-center text-lg bg-red-600 text-white w-5 h-5 p-3 rounded-full absolute left-4 top-4'>{cartCount}</span>

@@ -4,6 +4,7 @@ import Hero from '../Hero/Hero'
 import ScrollBanner from '../ScrollBanner/ScrollBanner'
 import OurStory from '../OurStory/OurStory'
 import BestSelling from '../BestSelling/BestSelling'
+import SellingProducts from '../SellingProducts/SellingProducts'
 
 const Home = () => {
   return (
@@ -12,7 +13,8 @@ const Home = () => {
       <Hero />
       <ScrollBanner/>
       <OurStory/>
-      <BestSelling/>
+      {/* <BestSelling/> */}
+      <SellingProducts/>
     </div>
   )
 }
