@@ -8,6 +8,8 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Cart from './components/Cart/Cart'
 import Wishlist from './components/Wishlist/Wishlist'
+import Checkout from './components/Checkout/Checkout'
+import Payment from './components/Payment/Payment'
 
 
 const App = () => {
@@ -33,6 +35,14 @@ const App = () => {
           {
             path: '/wishlist',
             element: <Wishlist />,
+          },
+          {
+            path: '/checkout',
+            element: <Checkout />,
+          },
+          {
+            path: '/payment',
+            element: <Payment />,
           },
           
         ]

@@ -60,8 +60,8 @@ const Wishlist = () => {
                 </p>
 
                 {/* Add To Cart Button */}
-                <button onClick={() => addToCart(product)}
-                 className="w-full py-3 rounded-lg bg-gradient-to-r 
+                <button onClick={() => addToCart(item)}
+                 className="w-full cursor-pointer py-3 rounded-lg bg-gradient-to-r 
                                    from-lime-200 to-lime-300 text-black font-bold 
                                    hover:from-lime-300 hover:to-lime-400 
                                    transition duration-300 flex items-center justify-center gap-2">

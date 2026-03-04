@@ -99,12 +99,13 @@ const Cart = () => {
             </span>
           </div>
 
-          <button className="w-full cursor-pointer mt-8 py-3 rounded-lg bg-gradient-to-r 
+          <Link to = '/checkout'
+           className="w-full cursor-pointer mt-8 py-3 rounded-lg bg-gradient-to-r 
                              from-lime-200 to-lime-300 text-black font-bold 
                              hover:from-lime-300 hover:to-lime-400 
                              transition duration-300">
             Proceed To Checkout
-          </button>
+          </Link >
 
         </div>
 
