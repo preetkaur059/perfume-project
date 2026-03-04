@@ -7,6 +7,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Cart from './components/Cart/Cart'
+import Wishlist from './components/Wishlist/Wishlist'
 
 
 const App = () => {
@@ -28,6 +29,10 @@ const App = () => {
           {
             path: '/cart',
             element: <Cart />,
+          },
+          {
+            path: '/wishlist',
+            element: <Wishlist />,
           },
           
         ]

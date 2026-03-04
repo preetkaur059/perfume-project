@@ -1,23 +1,30 @@
 import React from 'react'
 import { FaHeart, FaPlus, FaStar } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import { useContext } from "react";
+import { StoreContext } from "../../context/StoreContext";
 
 const Cards = ({ product }) => {
+    const { wishlist, addToWishlist, addToCart } = useContext(StoreContext);
+
     return (
         <div className="bg-[#111] overflow-hidden border border-[#222] 
                         transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-lime-300/20">
 
             {/* Top Icons */}
             <div className="flex justify-between items-center p-4 absolute absolute top-4 left-2 w-full z-10">
-                <span className="text-white text-xl hover:scale-110 cursor-pointer hover:text-lime-400 transition">
+                <button 
+                onClick={() => addToWishlist(product)}
+                className="text-white text-xl hover:scale-110 cursor-pointer hover:text-lime-400 transition">
                     <FaHeart />
-                </span>
+                </button>
 
-                <Link to = '/cart'
+                <button 
+                onClick={() => addToCart(product)}
                  className="bg-lime-200 text-xl text-black cursor-pointer p-2 mr-3 
                                    hover:scale-110 transition">
                     <FaPlus />
-                </Link>
+                </button>
             </div>
 
             {/* Image Section */}

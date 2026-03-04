@@ -22,18 +22,14 @@ const OurStory = () => {
           <div className="w-full max-w-[600px] m-12">
              <Heading highlight=" Our Little Story"/>
             
-            <p className="text-white text-[1.2rem] pb-7 md:text-[1.2rem] text-[1rem]">
-              A timeless fragrance that speaks of grace, confidence, and charm —
-              designed for those who believe in making every scent their signature.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus
-              alias cumque totam quod iusto soluta Vel, quod. Lorem ipsum dolor
-              sit amet consectetur adipisicing elit. Laboriosam tempore eos
-              cumque, fugit, praesentium asperiores soluta ab sit quasi nam
-              architecto suscipit corrupti nisi fugiat ex fuga saepe optio nulla!
-              Nam dolorum repellat similique aliquam, sint quis. Esse quas,
-              accusantium laboriosam magnam, laborum dolorem commodi sunt mollitia
-              ea iste laudantium sequi expedita ab quidem veritatis fugit ratione,
-              ducimus quibusdam maxime.
+            <p className="text-white text-[1rem] pb-7 md:text-[1.1rem] text-[1rem]">
+              A timeless fragrance that speaks of grace, confidence, and charm — designed for those who believe in making every scent their signature. Our journey began with a simple passion: to create perfumes that do more than just smell beautiful. We wanted every bottle to capture emotion, elegance, and individuality in its purest form.
+
+From delicate floral notes to deep woody and oriental blends, each fragrance is carefully crafted to reflect personality and mood. Inspired by luxury traditions and modern sophistication, our scents are made for those who walk with confidence and leave a lasting impression wherever they go.
+
+ Whether it’s a special evening, a busy workday, or a memorable celebration, our fragrances are designed to stay with you and be remembered.
+
+This is more than just a scent. It’s your identity in a bottle — elegant, powerful, unforgettable.
             </p>
 
             <a
