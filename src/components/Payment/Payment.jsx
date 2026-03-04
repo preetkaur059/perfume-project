@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaCreditCard, FaMoneyBillWave, FaLock } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Payment = () => {
 
@@ -131,13 +132,13 @@ const Payment = () => {
             <span className="text-lime-300">$310.00</span>
           </div>
 
-          <button className="w-full mt-8 py-3 rounded-lg bg-gradient-to-r 
+          <Link to= '/OrderSuccess' className="w-full mt-8 py-3 rounded-lg bg-gradient-to-r 
                              from-lime-200 to-lime-300 text-black font-bold 
                              hover:from-lime-300 hover:to-lime-400 
                              transition duration-300 flex items-center justify-center gap-2">
             <FaLock />
             Pay Securely
-          </button>
+          </Link>
 
         </div>
 

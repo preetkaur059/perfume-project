@@ -10,6 +10,8 @@ import Cart from './components/Cart/Cart'
 import Wishlist from './components/Wishlist/Wishlist'
 import Checkout from './components/Checkout/Checkout'
 import Payment from './components/Payment/Payment'
+import OrderSuccess from './components/OrderSuccess/OrderSuccess'
+import Orders from './components/Orders/Orders'
 
 
 const App = () => {
@@ -43,6 +45,14 @@ const App = () => {
           {
             path: '/payment',
             element: <Payment />,
+          },
+          {
+            path: '/OrderSuccess',
+            element: <OrderSuccess />,
+          },
+          {
+            path: '/Orders',
+            element: <Orders />,
           },
           
         ]
