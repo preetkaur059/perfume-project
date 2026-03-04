@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaHeart, FaPlus, FaStar } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const Cards = ({ product }) => {
     return (
@@ -12,14 +13,15 @@ const Cards = ({ product }) => {
                     <FaHeart />
                 </span>
 
-                <button className="bg-lime-200 text-xl text-black cursor-pointer p-2 mr-3 
+                <Link to = '/cart'
+                 className="bg-lime-200 text-xl text-black cursor-pointer p-2 mr-3 
                                    hover:scale-110 transition">
                     <FaPlus />
-                </button>
+                </Link>
             </div>
 
             {/* Image Section */}
-            <div className=" relative w-full h-72 overflow-hidden">
+            <div className=" relative w-full h-62 overflow-hidden">
                 <img 
                     src={product.image} 
                     alt={product.name}
@@ -28,15 +30,15 @@ const Cards = ({ product }) => {
             </div>
 
             {/* Content */}
-            <div className="text-center p-5">
-                <h3 className="text-white text-xl font-semibold mb-2 tracking-wide">
+            <div className="text-center pt-5">
+                <h3 className="text-white text-lg mb-2 tracking-wide">
                     {product.name}
                 </h3>
 
                 
                     <p className='flex justify-around'>
-                    <p className="text-[#e2f2b0] text-3xl font-bold mb-4">${product.price.toFixed(2)}</p>
-                    <span className="flex text-yellow-400 mt-2 text-xl gap-1">{Array(product.rating).fill().map((_, i) => ( <FaStar key={i} />))} </span>
+                    <p className="text-[#e2f2b0] text-2xl font-bold mb-4">${product.price.toFixed(2)}</p>
+                    <span className="flex text-yellow-400 mt-1 text-xl gap-1">{Array(product.rating).fill().map((_, i) => ( <FaStar key={i} />))} </span>
                 </p>
                 
 

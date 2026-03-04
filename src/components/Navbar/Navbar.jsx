@@ -47,32 +47,32 @@ const Navbar = () => {
                 </div>
                 <div className="md:flex hidden gap-8 text-xl">
 
-                    <NavLink to="/" className={({ isActive }) => `font-medium tracking-wider ${isActive ? "text-yellow-400" : "text-white hover:text-yellow-400" }`} >
+                    <NavLink to="/" className={({ isActive }) => `font-medium tracking-wider ${isActive ? "text-lime-200" : "text-white hover:text-lime-200" }`} >
                         Home
                     </NavLink>
 
-                    <NavLink to="/perfume" className={({ isActive }) => `font-medium tracking-wider ${isActive ? "text-yellow-400" : "text-white hover:text-yellow-400" }`} >
+                    <NavLink to="/perfume" className={({ isActive }) => `font-medium tracking-wider ${isActive ? "text-lime-200" : "text-white hover:text-lime-200" }`} >
                         All Products 
                     </NavLink>
 
-                    <NavLink to="/Contact" className={({ isActive }) => `font-medium tracking-wider ${isActive ? "text-yellow-400" : "text-white hover:text-yellow-400" }`} >
+                    <NavLink to="/Contact" className={({ isActive }) => `font-medium tracking-wider ${isActive ? "text-lime-200" : "text-white hover:text-lime-200" }`} >
                        Categories 
                     </NavLink>
-                    <NavLink to="/Contact" className={({ isActive }) => `font-medium tracking-wider ${isActive ? "text-yellow-400" : "text-white hover:text-yellow-400" }`} >
+                    <NavLink to="/Contact" className={({ isActive }) => `font-medium tracking-wider ${isActive ? "text-lime-200" : "text-white hover:text-lime-200" }`} >
                        Contact 
                     </NavLink>
 
                 </div>
                 {/* nav action  */}
                 <div className="flex  items-center gap-x-5">
-                    <div className="md:flex hidden  border-yellow-400 text-white border-2 rounded-full">
+                    <div className="md:flex hidden  border-lime-300 text-white border-2 rounded-full">
 
                         {/* search bar  */}
                         <input type="text" name='text' id='text' className='flex-1 h-[5vh] px-3 focus:outline-none'
                             onFocus={handleScroll}
                             onChange={(e) => setSearchItem(e.target.value)}
                             placeholder='Search...' autoComplete='off' />
-                        <button className='h-10 w-10 text-white flex justify-center items-center rounded-full text-2xl bg-gradient-to-b from-yellow-400 to-yellow-500 '>
+                        <button className='h-10 w-10 text-black flex justify-center items-center rounded-full text-2xl bg-gradient-to-b from-lime-200 to-lime-300 '>
                             <FaSearch className='bg- z-99' />
                         </button>
                     </div>
@@ -82,7 +82,7 @@ const Navbar = () => {
                         <IoHeartSharp />
                         {
                             wishlist.length > 0 && (
-                                <span className='flex justify-center items-center text-lg bg-red-600 text-white w-5 h-5 p-3 rounded-full absolute left-4 top-4'>{wishlist.length}</span>)
+                                <span className='flex justify-center items-center text-lg bg-lime-300 text-black w-5 h-5 p-3 rounded-full absolute left-4 top-4'>{wishlist.length}</span>)
                         }
                     </Link>
 
@@ -91,7 +91,7 @@ const Navbar = () => {
                         <FaShoppingCart />
                         {
                             cartCount > 0 &&
-                            <span className='flex justify-center items-center text-lg bg-red-600 text-white w-5 h-5 p-3 rounded-full absolute left-4 top-4'>{cartCount}</span>
+                            <span className='flex justify-center items-center text-lg bg-lime-300 text-black w-5 h-5 p-3 rounded-full absolute left-4 top-4'>{cartCount}</span>
                         }
                     </Link>
 

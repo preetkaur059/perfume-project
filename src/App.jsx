@@ -6,6 +6,7 @@ import { StoreProvider } from './context/StoreContext'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import Cart from './components/Cart/Cart'
 
 
 const App = () => {
@@ -23,6 +24,10 @@ const App = () => {
           {
             path: '/',
             element: <Home />,
+          },
+          {
+            path: '/cart',
+            element: <Cart />,
           },
           
         ]

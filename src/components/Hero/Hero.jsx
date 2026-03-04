@@ -1,9 +1,10 @@
 import React from "react";
-import perfumeImg from "../../assets/perfume.png";
+// import perfumeImg from "../../assets/orange2.png";
+import perfumeImg from "../../assets/perfume4.png";
 
 const Hero = () => {
   return (
-    <div className="relative isolate mt-24 pt-10 bg-black overflow-hidden">
+    <div className="relative isolate pt-35 pt-10 bg-black overflow-hidden">
 
       {/* Bottom Blur Layer */}
       <div className="absolute bottom-0 h-[35vh] w-full bg-black blur-[10px] -z-10"></div>

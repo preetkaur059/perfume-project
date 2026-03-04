@@ -1,89 +1,117 @@
 import per1 from '../../assets/1.jpg'
-import per2 from '../../assets/2.jpg'
-import per3 from '../../assets/3.jpg'
-import per4 from '../../assets/4.jpg'
-import per5 from '../../assets/5.jpg'
+import chanel from '../../assets/chanel.jpg'
+import chanel2 from '../../assets/chanel2.jpg'
+import chanel3 from '../../assets/chanel3.jpg'
+// import per3 from '../../assets/3.jpg'
+// import per4 from '../../assets/4.jpg'
+// import per5 from '../../assets/5.jpg'
 import per6 from '../../assets/6.jpg'
-import per7 from '../../assets/7.jpg'
+import per7 from '../../assets/77.jpg'
 import per8 from '../../assets/8.jpg'
 import per9 from '../../assets/9.jpg'
 import per10 from '../../assets/10.jpg'
+import per11 from '../../assets/11.jpg'
+import per12 from '../../assets/12.jpg'
+import per13 from '../../assets/13.jpg'
+import per14 from '../../assets/14.jpg'
+import per15 from '../../assets/15.jpg'
+import per16 from '../../assets/16.jpg'
+import per17 from '../../assets/17.jpg'
+import per20 from '../../assets/20.jpg'
+import per21 from '../../assets/21.jpg'
+import per22 from '../../assets/22.jpg'
+// import per23 from '../../assets/23.jpg'
+import per24 from '../../assets/24.jpg'
+import per25 from '../../assets/25.jpg'
+import per30 from '../../assets/30.jpg'
+import hugo from '../../assets/hugo.jpg'
+import gucci from '../../assets/gucci.jpg'
+import gallery3 from '../../assets/gallery3.jpg'
+import gallery5 from '../../assets/gallery5.jpg'
+import gallery6 from '../../assets/gallery6.jpg'
+import gallery7 from '../../assets/gallery7.jpg'
+import missdior from '../../assets/missdior.jpg'
+import gabbana from '../../assets/gabbana.jpg'
+import jadore from '../../assets/jadore.jpg'
+import bentley from '../../assets/bentley.jpg'
+import verspace from '../../assets/verspace.jpg'
+import dior from '../../assets/dior.jpg'
 
 const products = [
   {
-    id: 1,
-    name: "Dior Sauvage",
-    price: 120,
-    category: "men",
-    rating: 5,
-    isNew: false,
-    description: "A bold and fresh fragrance with bergamot and ambroxan notes for confident men.",
-    image: per1  
-  },{
-    id: 2,
-    name: "Bleu de Chanel",
-    price: 130,
-    category: "men",
-    rating: 5,
-    isNew: true,
-    description: "A woody aromatic scent with citrus freshness and masculine depth.",
-    image: per2
-  },
-  {
-    id: 3,
-    name: "Armani Code",
-    price: 110,
-    category: "men",
-    rating: 4,
-    isNew: false,
-    description: "A warm blend of tonka bean and leather, perfect for evening wear.",
-    image: per3
-  },
-  {
-    id: 4,
-    name: "Versace Eros",
-    price: 115,
-    category: "men",
-    rating: 5,
-    isNew: true,
-    description: "Fresh mint and vanilla create a strong and youthful fragrance.",
-    image: per4
-  },
-  {
-    id: 5,
-    name: "Hugo Boss Bottled",
-    price: 100,
-    category: "men",
-    rating: 4,
-    isNew: false,
-    description: "An elegant scent with apple, cinnamon, and woody notes.",
-    image: per5
-  },
-  {
-    id: 6,
-    name: "Paco Rabanne 1 Million",
-    price: 115,
-    category: "men",
-    rating: 5,
-    isNew: true,
-    description: "A spicy and sweet fragrance with leather and amber tones.",
-    image: per6
-  },
-  {
-    id: 7,
-    name: "Prada Luna Rossa",
+     id: 1,
+    name: "Maison Francis Kurkdjian",
     price: 112,
-    category: "men",
+    category: "Men",
     rating: 4,
     isNew: false,
     description: "A sporty scent with lavender and fresh citrus notes.",
     image: per7
+  },{
+    id: 2,
+    name: "Bleu de Chanel",
+    price: 130,
+    category: "Men",
+    rating: 5,
+    isNew: true,
+    description: "A woody aromatic scent with citrus freshness and masculine depth.",
+    image: chanel
+  },
+  {
+    id: 3,
+    name: "Versace Eros Flame",
+    price: 110,
+    category: "Men",
+    rating: 4,
+    isNew: false,
+    description: "A warm blend of tonka bean and leather, perfect for evening wear.",
+    image: verspace 
+  },
+  {
+    id: 4,
+    name: "Lamar – Kajal",
+    price: 120,
+    category: "Women",
+    rating: 5,
+    isNew: true,
+    description: "A warm and addictive scent with coffee and vanilla notes.",
+    image: per10
+  },
+  {
+    id: 5,
+    name: "Dolce & Gabbana",
+    price: 110,
+    category: "Women",
+    rating: 4,
+    isNew: false,
+    description: "A rich white floral fragrance inspired by blooming gardens.",
+    image: gabbana
+  },
+  {
+    id: 6,
+    name: "Golden Leather – Mancera",
+    price: 100,
+    category: "Women",
+    rating: 4,
+    isNew: true,
+    description: "Light and fresh with strawberry and violet notes.",
+    image: per25 
+  },
+  {
+    id: 7,
+    name: "Dior Sauvage",
+    price: 120,
+    category: "Men",
+    rating: 5,
+    isNew: false,
+    description: "A bold and fresh fragrance with bergamot and ambroxan notes for confident Men.",
+    image: dior  
   },
   {
     id: 8,
-    name: "Azzaro Wanted",
+    name: "Roja Harrods",
     price: 105,
-    category: "men",
+    category: "Men",
     rating: 4,
     isNew: true,
     description: "A vibrant fragrance with lemon, ginger, and woody base.",
@@ -93,213 +121,221 @@ const products = [
     id: 9,
     name: "Chanel No. 5",
     price: 140,
-    category: "women",
+    category: "Women",
     rating: 5,
     isNew: false,
     description: "A timeless floral fragrance with rose and jasmine.",
-    image: per9
+    image: chanel2
   },
   {
     id: 10,
-    name: "Black Opium",
-    price: 120,
-    category: "women",
+    name: "J’adore – Dior",
+    price: 115,
+    category: "Men",
     rating: 5,
     isNew: true,
-    description: "A warm and addictive scent with coffee and vanilla notes.",
-    image: per10
+    description: "Fresh mint and vanilla create a strong and youthful fragrance.",
+    image: jadore
   },
   {
     id: 11,
-    name: "Gucci Bloom",
-    price: 110,
-    category: "women",
+    name: "Hugo Boss Bottled",
+    price: 100,
+    category: "Men",
     rating: 4,
     isNew: false,
-    description: "A rich white floral fragrance inspired by blooming gardens.",
-    image: per1
+    description: "An elegant scent with apple, cinnamon, and woody notes.",
+    image: hugo
   },
   {
     id: 12,
-    name: "Marc Jacobs Daisy",
-    price: 100,
-    category: "women",
-    rating: 4,
+    name: "La Nuit de l'Homme",
+    price: 115,
+    category: "Men",
+    rating: 5,
     isNew: true,
-    description: "Light and fresh with strawberry and violet notes.",
-    image: per1 
+    description: "A spicy and sweet fragrance with leather and amber tones.",
+    image: per6
   },
   {
     id: 13,
-    name: "Armani Si",
+    name: "Triumph of Bacchus – Argos",
     price: 118,
-    category: "women",
+    category: "Women",
     rating: 5,
     isNew: false,
     description: "A modern feminine fragrance with blackcurrant and vanilla.",
-    image: per1 
+    image: per12 
 },
   {
     id: 14,
-    name: "Versace Bright Crystal",
+    name: "Scent Salim Pink Oud",
     price: 108,
-    category: "women",
+    category: "Women",
     rating: 4,
     isNew: true,
     description: "A delicate floral scent with peony and musk.",
-    image: per1
+    image: per13
   },
   {
     id: 15,
-    name: "Burberry Her",
+    name: "Vibrant Leather – Zara",
     price: 125,
-    category: "women",
+    category: "Women",
     rating: 5,
     isNew: false,
     description: "A fruity gourmand fragrance with berries and creamy base.",
-    image: per1
+    image: per14
   },
   {
     id: 16,
-    name: "Valentino Donna",
+    name: "Dolce & Gabbana",
     price: 130,
-    category: "women",
+    category: "Women",
     rating: 4,
     isNew: true,
     description: "A romantic scent with rose and soft leather notes.",
-    image: per1 
+    image: per15 
  },
   {
     id: 17,
-    name: "Tom Ford Oud Wood",
+    name: "Miss Dior",
     price: 180,
-    category: "unisex",
+    category: "Women",
     rating: 5,
     isNew: false,
     description: "A luxurious oud fragrance blended with spices and vanilla.",
-    image: per1},
+    image: missdior
+  },
   {
     id: 18,
-    name: "Baccarat Rouge 540",
+    name: "Valentino",
     price: 200,
-    category: "unisex",
+    category: "Unisex",
     rating: 5,
     isNew: true,
     description: "A sophisticated scent with amber and woody notes.",
-    image: per1 },
+    image: per17 
+  },
   {
     id: 19,
-    name: "CK One",
+    name: "Mehrān Modiri",
     price: 90,
-    category: "unisex",
+    category: "Unisex",
     rating: 4,
     isNew: false,
     description: "A refreshing citrus fragrance for everyday wear.",
-    image: per1
+    image: per20
   },
   {
     id: 20,
-    name: "Jo Malone English Pear",
+    name: "Acqua di Colonia – Santa Maria Novella",
     price: 150,
-    category: "unisex",
+    category: "Unisex",
     rating: 4,
     isNew: true,
     description: "A fruity floral scent with pear and freesia notes.",
-    image: per1 },
+    image: per21 
+  },
   {
     id: 21,
     name: "Le Labo Santal 33",
     price: 190,
-    category: "unisex",
+    category: "Unisex",
     rating: 5,
     isNew: false,
     description: "A woody spicy fragrance with sandalwood and cardamom.",
-    image: per1 },
+    image: per22 
+  },
   {
     id: 22,
-    name: "Maison Margiela Replica",
+    name: "Valentino",
     price: 160,
-    category: "unisex",
+    category: "Unisex",
     rating: 4,
     isNew: true,
     description: "A nostalgic scent inspired by warm memories and comfort.",
-    image: per1},
+    image: per16
+  },
   {
     id: 23,
-    name: "Byredo Gypsy Water",
+    name: "Bekheit – Eau de Parfum",
     price: 175,
-    category: "unisex",
+    category: "Unisex",
     rating: 5,
     isNew: false,
     description: "A fresh woody scent with vanilla and sandalwood.",
-    image: per1
+    image: per24
   },
   {
     id: 24,
-    name: "Issey Miyake L’Eau d’Issey",
+    name: "CHANEL – Paris",
     price: 110,
-    category: "women",
+    category: "Women",
     rating: 4,
     isNew: true,
     description: "A clean aquatic fragrance with lotus and rose notes.",
-    image: per1
+    image: chanel3
   },
   {
     id: 25,
-    name: "Mont Blanc Explorer",
+    name: "My Burberry",
     price: 105,
-    category: "men",
+    category: "Men",
     rating: 4,
     isNew: false,
     description: "A woody aromatic scent with bergamot and patchouli.",
-    image: per1 },
+    image: per30 
+  },
   {
     id: 26,
-    name: "Dolce & Gabbana Light Blue",
+    name: "Jeanne LAVIN – Lanvin",
     price: 115,
-    category: "women",
+    category: "Women",
     rating: 4,
     isNew: true,
     description: "A fresh Mediterranean scent with lemon and apple.",
-    image: per1  },
+    image: gallery3
+},
   {
     id: 27,
-    name: "Givenchy L'Interdit",
+    name: "Pera Granita – Guerlain",
     price: 128,
-    category: "women",
+    category: "Women",
     rating: 5,
     isNew: false,
     description: "A bold floral fragrance with orange blossom and vanilla.",
-    image: per1 },
+    image: gallery5
+   },
   {
     id: 28,
-    name: "YSL Y",
+    name: "Coco Mademoiselle – Chanel",
     price: 122,
-    category: "men",
+    category: "Men",
     rating: 4,
     isNew: true,
     description: "A modern masculine scent with sage and apple notes.",
-    image: per1  
+    image: gallery6  
   },
   {
     id: 29,
     name: "Gucci Flora Gorgeous Gardenia",
     price: 135,
-    category: "women",
+    category: "Women",
     rating: 5,
     isNew: false,
     description: "A sweet floral fragrance with pear blossom and gardenia.",
-    image: per1
+    image: gucci 
   },
   {
     id: 30,
-    name: "Narciso Rodriguez For Her",
+    name: "Seoul",
     price: 132,
-    category: "women",
+    category: "Women",
     rating: 4,
     isNew: true,
     description: "A sensual musky fragrance with soft floral undertones.",
-    image: per1
+    image: gallery7
 },
 ];
 export default products
