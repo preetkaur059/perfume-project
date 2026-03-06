@@ -1,6 +1,7 @@
 import React from "react";
 import storyimg from "../../assets/perfume1.png";
 import Heading from "../Heading/Heading";
+import Button from "../Button/Button";
 
 const OurStory = () => {
   return (
@@ -32,14 +33,11 @@ From delicate floral notes to deep woody and oriental blends, each fragrance is 
 This is more than just a scent. It’s your identity in a bottle — elegant, powerful, unforgettable.
             </p>
 
-            <a
-              href="#"
-              className="inline-block px-4 py-2 bg-[#e2f2b0] text-black text-[1.2rem] font-bold border-2 border-beige hover:bg-[#efc3c5] transition"
-            >
+            <button
+              className="inline-block px-4 py-2 bg-[#e2f2b0] text-black text-[1.2rem] font-bold border-2 border-white hover:bg-[#efc3c5] hover:scale-102 transition">
               Read More
-            </a>
-
-          </div>
+            </button>
+            </div>
 
         </div>
       </div>

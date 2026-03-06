@@ -4,7 +4,7 @@ import perfumeImg from "../../assets/perfume4.png";
 
 const Hero = () => {
   return (
-    <div className="relative isolate pt-35 pt-10 bg-black overflow-hidden">
+    <div className="relative isolate pt-32 pt-10 bg-black overflow-hidden">
 
       {/* Bottom Blur Layer */}
       <div className="absolute bottom-0 h-[35vh] w-full bg-black blur-[10px] -z-10"></div>

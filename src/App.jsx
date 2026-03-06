@@ -12,6 +12,11 @@ import Checkout from './components/Checkout/Checkout'
 import Payment from './components/Payment/Payment'
 import OrderSuccess from './components/OrderSuccess/OrderSuccess'
 import Orders from './components/Orders/Orders'
+import Allproducts from './components/Allproducts/Allproducts'
+import Men from './components/Categories/Men'
+import Women from './components/Categories/Women'
+import Unisex from './components/Categories/Unisex'
+import Contact from './components/Contact/Contact'
 
 
 const App = () => {
@@ -53,6 +58,26 @@ const App = () => {
           {
             path: '/Orders',
             element: <Orders />,
+          },
+          {
+            path: '/Allproducts',
+            element: <Allproducts />,
+          },
+          {
+            path: '/Men',
+            element: <Men />,
+          },
+          {
+            path: '/Women',
+            element: <Women />,
+          },
+          {
+            path: '/Unisex',
+            element: <Unisex />,
+          },
+          {
+            path: '/Contact',
+            element: <Contact />,
           },
           
         ]

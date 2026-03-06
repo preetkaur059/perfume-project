@@ -124,6 +124,7 @@ export const StoreProvider = ({ children }) => {
     const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
     setCartCount(totalItems);
   }, [cart]);
+  
 
   const clearDeliveryInfo = () => {
     setDeliveryInfo({

@@ -1,29 +1,18 @@
-import React from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { FaBoxOpen, FaTruck, FaCheckCircle } from "react-icons/fa";
+import { StoreContext } from "../../context/StoreContext";
 
 const Orders = () => {
 
-  const orders = [
-    {
-      id: "#PRF2026-45821",
-      date: "04 March 2026",
-      total: 310,
-      status: "Shipped",
-      items: [
-        { name: "Golden Oud", qty: 1 },
-        { name: "Royal Leather", qty: 2 }
-      ]
-    },
-    {
-      id: "#PRF2026-45810",
-      date: "01 March 2026",
-      total: 120,
-      status: "Delivered",
-      items: [
-        { name: "Midnight Bloom", qty: 1 }
-      ]
-    }
-  ];
+  const { orderTotal } = useContext(StoreContext);
+
+  const [orders, setOrders] = useState([]);
+
+  useEffect(() => {
+    const savedOrders =
+      JSON.parse(localStorage.getItem("orders")) || [];
+    setOrders(savedOrders);
+  }, []);
 
   const getStatusIcon = (status) => {
     if (status === "Processing")
@@ -35,34 +24,35 @@ const Orders = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0d0d0d] text-white px-6 md:px-20 py-12">
+    <div className="min-h-screen bg-[#0d0d0d] text-white px-6 md:px-20 pt-28">
 
-      {/* Heading */}
       <h1 className="text-4xl font-bold text-center mb-12 tracking-wider">
         Your Orders
       </h1>
 
       {orders.length === 0 ? (
+
         <div className="text-center mt-20">
           <h2 className="text-2xl mb-4">No Orders Yet 📦</h2>
-          <p className="text-gray-400 mb-6">
+          <p className="text-gray-400">
             Looks like you haven’t placed any orders.
           </p>
         </div>
+
       ) : (
 
-        <div className="space-y-8">
+        <div className="space-y-8 pb-6">
 
           {orders.map((order, index) => (
+
             <div
               key={index}
               className="bg-[#111] border border-[#222] rounded-2xl p-8 
-                         hover:shadow-xl hover:shadow-lime-300/10 
-                         transition duration-500"
+              hover:shadow-xl hover:shadow-lime-300/10 transition duration-500"
             >
 
               {/* Top Row */}
-              <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-6 gap-4">
+              <div className="grid md:grid-cols-4 gap-6 mb-6">
 
                 <div>
                   <p className="text-gray-400 text-sm">Order ID</p>
@@ -78,7 +68,7 @@ const Orders = () => {
 
                 <div>
                   <p className="text-gray-400 text-sm">Total</p>
-                  <p className="font-bold">${order.total.toFixed(2)}</p>
+                  <p className="font-bold">${order.total}</p>
                 </div>
 
                 <div className="flex items-center gap-2 text-sm font-semibold">
@@ -88,26 +78,59 @@ const Orders = () => {
 
               </div>
 
-              {/* Items */}
-              <div className="border-t border-[#222] pt-4 space-y-2">
-                {order.items.map((item, i) => (
-                  <div key={i} className="flex justify-between text-gray-300">
-                    <span>{item.name}</span>
-                    <span>Qty: {item.qty}</span>
-                  </div>
-                ))}
+              {/* Customer Info */}
+              <div className="border-t border-[#222] pt-4 pb-4">
+
+                <p className="text-gray-400 mb-2 text-sm">Customer Details</p>
+
+                <div className="grid md:grid-cols-2 gap-4 text-gray-300">
+
+                  <p>
+                    <span className="text-gray-400">Name:</span>{" "}
+                    {order.customer?.firstName}
+                  </p>
+
+                  <p>
+                    <span className="text-gray-400">Phone:</span>{" "}
+                    {order.customer?.phone}
+                  </p>
+
+                  <p>
+                    <span className="text-gray-400">Email:</span>{" "}
+                    {order.customer?.email}
+                  </p>
+
+                  <p>
+                    <span className="text-gray-400">Address:</span>{" "}
+                    {order.customer?.street}, {order.customer?.city},{" "}
+                    {order.customer?.state}, {order.customer?.postalCode}
+                  </p>
+
+                </div>
+
               </div>
 
-              {/* Action Button */}
-              <div className="mt-6 text-right">
-                <button className="px-6 py-2 border border-lime-300 text-lime-300 
-                                   rounded-lg hover:bg-lime-300 hover:text-black 
-                                   transition duration-300">
-                  View Details
-                </button>
+              {/* Items */}
+              <div className="border-t border-[#222] pt-4 space-y-2">
+
+                <p className="text-gray-400 text-sm mb-2">Items</p>
+
+                {order.items?.map((item, i) => (
+
+                  <div
+                    key={i}
+                    className="flex justify-between text-gray-300"
+                  >
+                    <span>{item.name}</span>
+                    <span>Qty: {item.quantity}</span>
+                  </div>
+
+                ))}
+
               </div>
 
             </div>
+
           ))}
 
         </div>

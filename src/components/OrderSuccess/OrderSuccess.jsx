@@ -1,40 +1,115 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 const OrderSuccess = () => {
 
   const navigate = useNavigate();
+  const [order, setOrder] = useState(null);
+
+  useEffect(() => {
+
+    const orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+    if (orders.length > 0) {
+      const lastOrder = orders[orders.length - 1];
+      setOrder(lastOrder);
+    }
+
+  }, []);
+
+  if (!order) {
+    return (
+      <div className="min-h-screen  bg-[#0d0d0d] flex items-center justify-center text-white">
+        No Order Found
+      </div>
+    );
+  }
 
   return (
-    <div className="min-h-screen bg-[#0d0d0d] flex items-center justify-center px-6">
+    <div className="min-h-screen pt-28 bg-[#0d0d0d] flex items-center justify-center px-6 py-10">
 
       <div className="bg-[#111] border border-[#222] p-10 rounded-2xl text-center 
-                      max-w-lg w-full hover:shadow-2xl hover:shadow-lime-300/20 
+                      max-w-xl w-full hover:shadow-2xl hover:shadow-lime-300/20 
                       transition duration-500">
 
         {/* Success Icon */}
         <div className="flex justify-center mb-6">
-          <FaCheckCircle className="text-lime-300 text-7xl animate-bounce" />
+          <FaCheckCircle className="text-lime-300 text-5xl animate-bounce" />
         </div>
 
         {/* Title */}
-        <h1 className="text-3xl font-bold mb-4 tracking-wide">
+        <h1 className="text-3xl text-white font-bold mb-4 tracking-wide">
           Order Placed Successfully!
         </h1>
 
-        {/* Message */}
-        <p className="text-gray-400 mb-6">
-          Thank you for shopping with us. Your perfume is being prepared 
-          and will be delivered soon.
+        <p className="text-gray-300 mb-6">
+          Thank you for shopping with us. Your order has been confirmed.
         </p>
 
-        {/* Order Info */}
-        <div className="bg-[#161616] border border-[#222] p-4 rounded-lg mb-6">
-          <p className="text-sm text-gray-400">Order ID</p>
-          <p className="text-lime-300 font-bold text-lg">
-            #PRF2026-45821
-          </p>
+        {/* Order Details */}
+        <div className="bg-[#161616] border border-[#222] p-6 rounded-lg text-left space-y-3 mb-6">
+
+          <div className="flex justify-between">
+            <span className="text-gray-300">Order ID</span>
+            <span className="text-lime-300 font-semibold">{order.id}</span>
+          </div>
+
+          <div className="flex justify-between">
+            <span className="text-gray-300">Date</span>
+            <span className="text-white">{order.date}</span>
+          </div>
+
+          <div className="flex justify-between">
+            <span className="text-gray-300">Customer</span>
+            <span className="text-white">{order.customer.firstName}</span>
+          </div>
+
+          <div className="flex justify-between">
+            <span className="text-gray-300">Email</span>
+            <span className="text-white">{order.customer.email}</span>
+          </div>
+
+          <div className="flex justify-between">
+            <span className="text-gray-300">Address</span>
+            <span className="text-white text-right">
+              {order.customer.street}
+            </span>
+          </div>
+
+        </div>
+
+        {/* Items */}
+        <div className="bg-[#161616] border border-[#222] p-6 rounded-lg mb-6 text-left">
+
+          <h2 className="text-white font-semibold mb-4">
+            Ordered Items
+          </h2>
+
+          <div className="space-y-2">
+
+            {order.items.map((item, index) => (
+              <div
+                key={index}
+                className="flex justify-between text-gray-300 text-sm"
+              >
+                <span>{item.name}</span>
+                <span>${item.price}</span>
+              </div>
+            ))}
+
+          </div>
+
+        </div>
+
+        {/* Total */}
+        <div className="bg-[#161616] border border-[#222] p-4 rounded-lg mb-6 flex justify-between">
+
+          <span className="text-white">Total Paid</span>
+          <span className="text-lime-300 font-bold text-lg">
+            ${order.total}
+          </span>
+
         </div>
 
         {/* Buttons */}
@@ -42,9 +117,9 @@ const OrderSuccess = () => {
 
           <button
             onClick={() => navigate("/")}
-            className="px-6 py-3 rounded-lg bg-gradient-to-r 
-                       from-lime-200 to-lime-300 text-black font-bold 
-                       hover:from-lime-300 hover:to-lime-400 transition duration-300">
+            className="px-6 py-3 rounded-lg bg-lime-300 text-black font-bold 
+                       hover:bg-lime-400 transform hover:scale-105 
+                       transition duration-300 cursor-pointer">
             Continue Shopping
           </button>
 
@@ -52,7 +127,7 @@ const OrderSuccess = () => {
             onClick={() => navigate("/orders")}
             className="px-6 py-3 rounded-lg border border-lime-300 
                        text-lime-300 hover:bg-lime-300 hover:text-black 
-                       transition duration-300">
+                       transition duration-300 cursor-pointer">
             View Orders
           </button>
 

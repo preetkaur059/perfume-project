@@ -8,12 +8,19 @@ import { BiMenuAltRight } from "react-icons/bi";
 import { Link } from 'react-router-dom';
 import { useContext } from "react";
 import { StoreContext } from "../../context/StoreContext";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 
 const Navbar = () => {
 
     const { totalItems, wishlist, setSearchItem, cartCount } = useContext(StoreContext);
+    const [open, setOpen] = useState(false);
+    const location = useLocation();
+    const isCategoryActive =
+        location.pathname === "/Categories" ||
+        location.pathname === "/Men" ||
+        location.pathname === "/Women" ||
+        location.pathname === "/Unisex";
 
     // scrollbar with shadow 
     const handleScroll = () => {
@@ -41,25 +48,63 @@ const Navbar = () => {
 
     return (
         <header className={`bg-black z-99 fixed top-0 left-0 right-0 ${isScrolled ? 'drop-shadow-[0_4px_25px_rgba(0,0,0,0.2)]' : ""} `}>
-            <nav className={`max-w-350  flex m-auto md:h-[14vh] h-[12vh] px-10 items-center justify-between`}>
+            <nav className={`max-w-350  flex m-auto md:h-[12vh] h-[10vh] px-10 items-center justify-between`}>
                 <div className="">
                     <Link to="/" className='text-3xl text-white font-bold'>ZIVARA</Link>
                 </div>
                 <div className="md:flex hidden gap-8 text-xl">
 
-                    <NavLink to="/" className={({ isActive }) => `font-medium tracking-wider ${isActive ? "text-lime-200" : "text-white hover:text-lime-200" }`} >
+                    <NavLink to="/" className={({ isActive }) => `font-medium tracking-wider ${isActive ? "text-lime-200" : "text-white hover:text-lime-200"}`} >
                         Home
                     </NavLink>
 
-                    <NavLink to="/perfume" className={({ isActive }) => `font-medium tracking-wider ${isActive ? "text-lime-200" : "text-white hover:text-lime-200" }`} >
-                        All Products 
+                    <NavLink to="/Allproducts" className={({ isActive }) => `font-medium tracking-wider ${isActive ? "text-lime-200" : "text-white hover:text-lime-200"}`} >
+                        All Products
                     </NavLink>
+                    <div className="relative">
 
-                    <NavLink to="/Contact" className={({ isActive }) => `font-medium tracking-wider ${isActive ? "text-lime-200" : "text-white hover:text-lime-200" }`} >
-                       Categories 
-                    </NavLink>
-                    <NavLink to="/Contact" className={({ isActive }) => `font-medium tracking-wider ${isActive ? "text-lime-200" : "text-white hover:text-lime-200" }`} >
-                       Contact 
+                        {/* Categories Button */}
+                        <div
+                            className="relative"
+                            onMouseEnter={() => setOpen(true)}
+                            onMouseLeave={() => setOpen(false)}>
+                            <NavLink
+                                to="/Categories"
+                                className={`font-medium tracking-wider ${isCategoryActive ? "text-lime-200" : "text-white hover:text-lime-200"
+                                    }`}
+                            >
+                                Categories
+                            </NavLink>
+
+                            {/* Dropdown */}
+                            {open && (
+                                <div className="absolute top-8 left-0 w-40 bg-[#1a1a1a] text-white rounded shadow-lg border border-gray-700 overflow-hidden transition-all duration-300 z-50">
+
+                                    <NavLink
+                                        to="/Men"
+                                        className={` block px-4 py-2 hover:bg-[#272727] transition-colors duration-200`}>
+                                        Men
+                                    </NavLink>
+
+                                    <NavLink
+                                        to="/Women"
+                                        className="block px-4 py-2 hover:bg-[#272727] transition-colors duration-200">
+                                        Women
+                                    </NavLink>
+
+                                    <NavLink
+                                        to="/Unisex"
+                                        className="block px-4 py-2 hover:bg-[#272727] transition-colors duration-200">
+                                        Unisex
+                                    </NavLink>
+
+                                </div>
+                            )}
+                        </div>
+
+                    </div>
+                    <NavLink to="/Contact" className={({ isActive }) => `font-medium tracking-wider ${isActive ? "text-lime-200" : "text-white hover:text-lime-200"}`} >
+                        Contact
                     </NavLink>
 
                 </div>

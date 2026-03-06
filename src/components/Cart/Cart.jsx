@@ -5,15 +5,15 @@ import { StoreContext } from "../../context/StoreContext";
 import { MdOutlineDelete } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import img2 from "../../assets/2.jpg";
-
+import { useNavigate } from "react-router-dom";
 
 
 const Cart = () => {
     const { cart, removeFromCart, quantityIncrement, quantityDecrease, subTotal, shippingFee, orderTotal } = useContext(StoreContext);
-
+    const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen pt-35 bg-[#0d0d0d] text-white px-6 md:px-20 py-12">
+    <div className="min-h-screen pt-28 bg-[#0d0d0d] text-white px-6 md:px-20 py-12">
 
       {/* Heading */}
       <h1 className="text-4xl font-bold mb-10 text-center tracking-wider">
@@ -99,13 +99,13 @@ const Cart = () => {
             </span>
           </div>
 
-          <Link to = '/checkout'
+          <button onClick={() => navigate("/checkout")}
            className="w-full cursor-pointer mt-8 py-3 rounded-lg bg-gradient-to-r 
                              from-lime-200 to-lime-300 text-black font-bold 
                              hover:from-lime-300 hover:to-lime-400 
                              transition duration-300">
             Proceed To Checkout
-          </Link >
+          </button >
 
         </div>
 

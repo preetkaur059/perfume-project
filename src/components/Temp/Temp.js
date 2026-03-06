@@ -1,7 +1,8 @@
-import per1 from '../../assets/1.jpg'
+import p1 from '../../assets/1.jpg'
 import chanel from '../../assets/chanel.jpg'
 import chanel2 from '../../assets/chanel2.jpg'
-import chanel3 from '../../assets/chanel3.jpg'
+import farma from '../../assets/farma.jpg'
+import chanel01 from '../../assets/chanel01.jpg'
 // import per3 from '../../assets/3.jpg'
 // import per4 from '../../assets/4.jpg'
 // import per5 from '../../assets/5.jpg'
@@ -24,8 +25,10 @@ import per22 from '../../assets/22.jpg'
 import per24 from '../../assets/24.jpg'
 import per25 from '../../assets/25.jpg'
 import per30 from '../../assets/30.jpg'
+import per31 from '../../assets/31.jpg'
 import hugo from '../../assets/hugo.jpg'
 import gucci from '../../assets/gucci.jpg'
+import gallery2 from '../../assets/gallery2.jpg'
 import gallery3 from '../../assets/gallery3.jpg'
 import gallery5 from '../../assets/gallery5.jpg'
 import gallery6 from '../../assets/gallery6.jpg'
@@ -33,7 +36,7 @@ import gallery7 from '../../assets/gallery7.jpg'
 import missdior from '../../assets/missdior.jpg'
 import gabbana from '../../assets/gabbana.jpg'
 import jadore from '../../assets/jadore.jpg'
-import bentley from '../../assets/bentley.jpg'
+import ben from '../../assets/ben.jpg'
 import verspace from '../../assets/verspace.jpg'
 import dior from '../../assets/dior.jpg'
 
@@ -107,16 +110,16 @@ const products = [
     description: "A bold and fresh fragrance with bergamot and ambroxan notes for confident Men.",
     image: dior  
   },
-  {
+   {
     id: 8,
-    name: "Roja Harrods",
-    price: 105,
-    category: "Men",
-    rating: 4,
+    name: "Farmasi Hera Eau de Parfum",
+    price: 116,
+    category: "Women",
+    rating: 5,
     isNew: true,
-    description: "A vibrant fragrance with lemon, ginger, and woody base.",
-    image: per8
-  },
+    description: "A sensual musky fragrance with soft floral undertones.",
+    image: farma
+},
   {
     id: 9,
     name: "Chanel No. 5",
@@ -159,14 +162,14 @@ const products = [
   },
   {
     id: 13,
-    name: "Triumph of Bacchus – Argos",
-    price: 118,
-    category: "Women",
-    rating: 5,
+    name: "Mehrān Modiri",
+    price: 90,
+    category: "Unisex",
+    rating: 4,
     isNew: false,
-    description: "A modern feminine fragrance with blackcurrant and vanilla.",
-    image: per12 
-},
+    description: "A refreshing citrus fragrance for everyday wear.",
+    image: gallery2
+  },
   {
     id: 14,
     name: "Scent Salim Pink Oud",
@@ -217,19 +220,19 @@ const products = [
     description: "A sophisticated scent with amber and woody notes.",
     image: per17 
   },
-  {
+   {
     id: 19,
-    name: "Mehrān Modiri",
-    price: 90,
-    category: "Unisex",
+    name: "Roja Harrods",
+    price: 105,
+    category: "Men",
     rating: 4,
-    isNew: false,
-    description: "A refreshing citrus fragrance for everyday wear.",
-    image: per20
+    isNew: true,
+    description: "A vibrant fragrance with lemon, ginger, and woody base.",
+    image: per8
   },
   {
     id: 20,
-    name: "Acqua di Colonia – Santa Maria Novella",
+    name: "Santa Maria Novella Colonia",
     price: 150,
     category: "Unisex",
     rating: 4,
@@ -275,7 +278,7 @@ const products = [
     rating: 4,
     isNew: true,
     description: "A clean aquatic fragrance with lotus and rose notes.",
-    image: chanel3
+    image: chanel01
   },
   {
     id: 25,
@@ -337,5 +340,26 @@ const products = [
     description: "A sensual musky fragrance with soft floral undertones.",
     image: gallery7
 },
+  {
+    id: 31,
+    name: "Eaudemoiselle Eau Florale",
+    price: 102,
+    category: "Women",
+    rating: 4,
+    isNew: true,
+    description: "A sensual musky fragrance with soft floral undertones.",
+    image: per31
+},
+{
+    id: 32,
+    name: "Triumph of Bacchus – Argos",
+    price: 118,
+    category: "Women",
+    rating: 5,
+    isNew: false,
+    description: "A modern feminine fragrance with blackcurrant and vanilla.",
+    image: per12 
+},
+  
 ];
 export default products

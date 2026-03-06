@@ -3,18 +3,21 @@ import Navbar from '../Navbar/Navbar'
 import Hero from '../Hero/Hero'
 import ScrollBanner from '../ScrollBanner/ScrollBanner'
 import OurStory from '../OurStory/OurStory'
-import BestSelling from '../BestSelling/BestSelling'
 import SellingProducts from '../SellingProducts/SellingProducts'
+import Services from '../Services/Services'
+import Sale from '../Sale/Sale'
+import Testimonals from '../Testimonals/Testimonals'
 
 const Home = () => {
   return (
     <div>
-      <Navbar/>
       <Hero />
       <ScrollBanner/>
       <OurStory/>
-      {/* <BestSelling/> */}
       <SellingProducts/>
+      <Services />
+      <Sale />
+      <Testimonals />
     </div>
   )
 }

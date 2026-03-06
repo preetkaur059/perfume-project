@@ -12,17 +12,17 @@ const Cards = ({ product }) => {
                         transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-lime-300/20">
 
             {/* Top Icons */}
-            <div className="flex justify-between items-center p-4 absolute absolute top-4 left-2 w-full z-10">
+            <div className="flex justify-between items-center p-4 absolute top-4 left-2 w-full z-10">
                 <button 
                 onClick={() => addToWishlist(product)}
-                className="text-white text-xl hover:scale-110 cursor-pointer hover:text-lime-400 transition">
+                className={` text-xl hover:scale-110 cursor-pointer hover:text-lime-400 transition ${wishlist.some(item => item.id === product.id) ? 'text-lime-300' : 'text-white'} `}>
                     <FaHeart />
                 </button>
 
                 <button 
                 onClick={() => addToCart(product)}
-                 className="bg-lime-200 text-xl text-black cursor-pointer p-2 mr-3 
-                                   hover:scale-110 transition">
+                  className="bg-lime-200  text-black cursor-pointer p-2 mr-3 border-2 border-[#f5f5dc]
+                               hover:bg-[#efc3c5]   hover:scale-110 transition"> 
                     <FaPlus />
                 </button>
             </div>
