@@ -14,7 +14,7 @@ const Cart = () => {
     const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen pt-22 bg-[#0d0d0d] text-white px-6 md:px-20 py-12">
+    <div className="min-h-screen pt-28 bg-[#0d0d0d] text-white px-6 md:px-20 py-12">
 
       {/* Heading */}
       {/* <h1 className="text-4xl font-bold mb-10 text-center tracking-wider">

@@ -107,7 +107,7 @@ const Checkout = () => {
   
 
   return (
-    <div className="min-h-screen pt-25 bg-[#0d0d0d] text-white px-6 md:px-20 py-12">
+    <div className="min-h-screen pt-28 bg-[#0d0d0d] text-white px-6 md:px-20 py-12">
 
       {/* <h1 className="text-4xl font-bold text-center mb-12 tracking-wider">
         Delivery Information

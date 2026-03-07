@@ -28,7 +28,7 @@ const OrderSuccess2 = () => {
   }
 
   return (
-    <div className="min-h-screen pt-25 bg-[#0d0d0d] flex items-center justify-center px-6 py-10">
+    <div className="min-h-screen pt-30 bg-[#0d0d0d] flex items-center justify-center px-6 py-10">
 
       <div className="bg-[#111] border border-[#222] p-8 rounded-2xl text-center 
                       max-w-xl w-full hover:shadow-xl hover:shadow-lime-300/20 
