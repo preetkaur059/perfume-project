@@ -48,6 +48,7 @@ const Testimonials = () => {
 
   return (
     <section className="bg-[#0a0a0a] py-20 px-6 md:px-16">
+      <div data-aos="fade-up"  data-aos-delay="100" className="">
 
       {/* Heading */}
       <div className="text-center mb-10">
@@ -109,7 +110,7 @@ const Testimonials = () => {
           ))}
 
       </Swiper>
-
+      </div>
     </section>
   );
 };

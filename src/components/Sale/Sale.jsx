@@ -26,16 +26,17 @@ const Sale = () => {
     {/* <!-- Text Content --> */}
     <div class="p-16 flex flex-col gap-3">
 
-      <h3 class="text-[#efc3c5] tracking-wider text-[1.3rem]">
+      <h3 data-aos="fade-up"  data-aos-delay="200" class="text-[#efc3c5] tracking-wider text-[1.3rem]">
         CELEBRATE DAY SALE!
       </h3>
 
-      <h1 class="text-white text-[2.2rem]">
-        Save 25% Off On All Items Collection
+      <h1 data-aos="fade-up"  data-aos-delay="300" class="text-white text-[2.2rem]">
+        Save 25% Off on<br/> Our Entire Fragrance Collection
       </h1>
 
+      <div data-aos="fade-up"  data-aos-delay="400" className="">
       <Button onClick={() => navigate("/Allproducts")}
-        content ='Shop Now'/>
+        content ='Shop Now'/> </div>
     </div>
   </div>
 </section>

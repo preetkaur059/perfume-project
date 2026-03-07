@@ -2,9 +2,9 @@ import React from "react";
 
 const ScrollBanner = () => {
   return (
-    <div className="bg-black pb-10 scroll-banner overflow-hidden">
+    <div className="bg-black py-8 scroll-banner overflow-hidden">
 
-      <div className="flex whitespace-nowrap animate-scroll">
+      <div data-aos="fade-up" className="flex whitespace-nowrap animate-scroll">
 
         {/* First Row */}
         <div className="flex items-center font-['Allura']">

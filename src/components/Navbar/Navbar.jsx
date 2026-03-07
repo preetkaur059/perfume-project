@@ -68,13 +68,12 @@ const Navbar = () => {
                             className="relative"
                             onMouseEnter={() => setOpen(true)}
                             onMouseLeave={() => setOpen(false)}>
-                            <NavLink
-                                to="/Categories"
-                                className={`font-medium tracking-wider ${isCategoryActive ? "text-lime-200" : "text-white hover:text-lime-200"
+                            <span
+                            className={`font-medium cursor-pointer tracking-wider ${isCategoryActive ? "text-lime-200" : "text-white hover:text-lime-200"
                                     }`}
                             >
                                 Categories
-                            </NavLink>
+                            </span>
 
                             {/* Dropdown */}
                             {open && (
