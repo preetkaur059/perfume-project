@@ -4,7 +4,7 @@ import Category from '../Category/Category';
 const Men = () => {
   return (
     <div className="pt-2">
-      <Category type="Men" />;
+      <Category type="Men" />
     </div>
   )
 }

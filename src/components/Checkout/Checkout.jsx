@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { StoreContext } from "../../context/StoreContext";
+import Heading from "../Heading/Heading";
 
 const Checkout = () => {
 
@@ -84,7 +85,7 @@ const Checkout = () => {
   // ⭐ clear cart
   clearCart();
 
-  navigate("/OrderSuccess");
+  navigate("/OrderSuccess2");
 };
 
   const handleChange = (e) => {
@@ -106,11 +107,14 @@ const Checkout = () => {
   
 
   return (
-    <div className="min-h-screen pt-28 bg-[#0d0d0d] text-white px-6 md:px-20 py-12">
+    <div className="min-h-screen pt-25 bg-[#0d0d0d] text-white px-6 md:px-20 py-12">
 
-      <h1 className="text-4xl font-bold text-center mb-12 tracking-wider">
+      {/* <h1 className="text-4xl font-bold text-center mb-12 tracking-wider">
         Delivery Information
-      </h1>
+      </h1> */}
+      <div className="text-center">
+        <Heading highlight='Delivery Information'/>
+      </div>
 
       <div className="grid lg:grid-cols-3 gap-10">
 
@@ -303,7 +307,7 @@ const Checkout = () => {
             onClick={handleProceed}
             disabled={cart.length === 0}
             className="w-full cursor-pointer mt-8 py-3 rounded-lg bg-gradient-to-r 
-            from-lime-200 to-lime-300 text-black font-bold 
+            from-lime-200 to-lime-300 text-black font-bold hover:scale-105
             hover:from-lime-300 hover:to-lime-400 transition duration-300">
 
             Continue To Payment

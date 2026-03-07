@@ -1,12 +1,15 @@
 import React from 'react'
 import saleimg from '../../assets/sale.png'
 import Button from '../Button/Button'
+import { useNavigate } from "react-router-dom";
 
 const Sale = () => {
+  const navigate = useNavigate();
+  
   return (
     <section class="bg-black relative isolate overflow-hidden">
-
-  {/* <!-- Glow effects --> */}
+      
+  {/* <!-- Glow effect --> */}
   <div class="absolute top-12 left-20 w-[15rem] h-[15rem] rounded-full blur-[150px] bg-orange-500 -z-10"></div>
   <div class="absolute bottom-12 right-20 w-[15rem] h-[15rem] rounded-full blur-[150px] bg-blue-500 -z-10"></div>
 
@@ -31,7 +34,7 @@ const Sale = () => {
         Save 25% Off On All Items Collection
       </h1>
 
-      <Button
+      <Button onClick={() => navigate("/Allproducts")}
         content ='Shop Now'/>
     </div>
   </div>

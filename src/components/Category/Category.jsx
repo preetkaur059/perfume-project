@@ -47,7 +47,7 @@ const Category = ({ type }) => {
       </div>
     </div>
 
-  );
+  )
 };
 
 export default Category;

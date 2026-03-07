@@ -10,7 +10,7 @@ import Cart from './components/Cart/Cart'
 import Wishlist from './components/Wishlist/Wishlist'
 import Checkout from './components/Checkout/Checkout'
 import Payment from './components/Payment/Payment'
-import OrderSuccess from './components/OrderSuccess/OrderSuccess'
+import OrderSuccess2 from './components/OrderSuccess/OrderSuccess2'
 import Orders from './components/Orders/Orders'
 import Allproducts from './components/Allproducts/Allproducts'
 import Men from './components/Categories/Men'
@@ -52,8 +52,8 @@ const App = () => {
             element: <Payment />,
           },
           {
-            path: '/OrderSuccess',
-            element: <OrderSuccess />,
+            path: '/OrderSuccess2',
+            element: <OrderSuccess2 />,
           },
           {
             path: '/Orders',

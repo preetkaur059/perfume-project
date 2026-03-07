@@ -8,7 +8,7 @@ const Wishlist = () => {
   const { wishlist, addToCart, removeFromWishlist } = useContext(StoreContext);
   
   return (
-    <div className="min-h-screen pt-30 bg-[#0d0d0d] text-white px-6 md:px-16 py-10">
+    <div className="min-h-screen pt-25 bg-[#0d0d0d] text-white px-6 md:px-16 py-10">
 
       {/* Heading */}
       <h1 className="text-3xl font-bold text-center mb-10 tracking-wider">

@@ -4,7 +4,7 @@ import Category from '../Category/Category'
 const Unisex = () => {
   return (
     <div className="pt-2">
-      <Category type="Unisex" />;
+      <Category type="Unisex" />
     </div>
   )
 }

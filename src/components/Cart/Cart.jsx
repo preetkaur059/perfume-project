@@ -6,6 +6,7 @@ import { MdOutlineDelete } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import img2 from "../../assets/2.jpg";
 import { useNavigate } from "react-router-dom";
+import Heading from "../Heading/Heading";
 
 
 const Cart = () => {
@@ -13,12 +14,15 @@ const Cart = () => {
     const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen pt-28 bg-[#0d0d0d] text-white px-6 md:px-20 py-12">
+    <div className="min-h-screen pt-22 bg-[#0d0d0d] text-white px-6 md:px-20 py-12">
 
       {/* Heading */}
-      <h1 className="text-4xl font-bold mb-10 text-center tracking-wider">
+      {/* <h1 className="text-4xl font-bold mb-10 text-center tracking-wider">
         Your Shopping Cart
-      </h1>
+      </h1> */}
+       <div className="text-center mb-3">
+        <Heading highlight='Your Shopping Cart'/>
+      </div>
 
       <div className="grid lg:grid-cols-3 gap-10">
 
@@ -102,7 +106,7 @@ const Cart = () => {
           <button onClick={() => navigate("/checkout")}
            className="w-full cursor-pointer mt-8 py-3 rounded-lg bg-gradient-to-r 
                              from-lime-200 to-lime-300 text-black font-bold 
-                             hover:from-lime-300 hover:to-lime-400 
+                             hover:from-lime-300 hover:to-lime-400 hover:scale-105
                              transition duration-300">
             Proceed To Checkout
           </button >

@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { FaBoxOpen, FaTruck, FaCheckCircle } from "react-icons/fa";
 import { StoreContext } from "../../context/StoreContext";
+import Heading from "../Heading/Heading";
 
 const Orders = () => {
 
@@ -24,12 +25,15 @@ const Orders = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0d0d0d] text-white px-6 md:px-20 pt-28">
+    <div className="min-h-screen bg-[#0d0d0d] text-white px-6 md:px-20 pt-25">
 
-      <h1 className="text-4xl font-bold text-center mb-12 tracking-wider">
+      {/* <h1 className="text-4xl font-bold text-center mb-6 tracking-wider">
         Your Orders
-      </h1>
-
+      </h1> */}
+      <div className="text-center">
+      <Heading highlight = 'Your Orders'/>
+      </div>
+      
       {orders.length === 0 ? (
 
         <div className="text-center mt-20">

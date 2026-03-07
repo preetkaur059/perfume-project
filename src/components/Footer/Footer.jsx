@@ -70,15 +70,15 @@ const Footer = () => {
 
           <div className="flex gap-4">
 
-            <div className="w-10 h-10 flex items-center justify-center border-2 border-lime-400/40 rounded-full hover:bg-lime-400 hover:text-black transition cursor-pointer">
+            <div className="w-10 h-10 flex items-center justify-center border-2 border-lime-400/40 rounded-full hover:bg-lime-300 hover:text-black transition cursor-pointer">
               <FaFacebookF />
             </div>
 
-            <div className="w-10 h-10 flex items-center justify-center border-2 border-lime-400/40 rounded-full hover:bg-lime-400 hover:text-black transition cursor-pointer">
+            <div className="w-10 h-10 flex items-center justify-center border-2 border-lime-400/40 rounded-full hover:bg-lime-300 hover:text-black transition cursor-pointer">
               <FaInstagram />
             </div>
 
-            <div className="w-10 h-10 flex items-center justify-center border-2 border-lime-400/40 rounded-full hover:bg-lime-400 hover:text-black transition cursor-pointer">
+            <div className="w-10 h-10 flex items-center justify-center border-2 border-lime-400/40 rounded-full hover:bg-lime-300 hover:text-black transition cursor-pointer">
               <FaTwitter />
             </div>
 
