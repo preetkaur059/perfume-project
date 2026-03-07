@@ -72,8 +72,8 @@ export const StoreProvider = ({ children }) => {
   }, 0);
 
   const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
-  const shippingFee = totalItems * 2;
-  const orderTotal = subTotal + shippingFee;
+  // const shippingFee = totalItems * 2;
+  const orderTotal = subTotal ;
 
   // add to wishlist 
   const addToWishlist = (product) => {
@@ -152,7 +152,6 @@ export const StoreProvider = ({ children }) => {
       removeFromCart,
       subTotal,
       totalItems,
-      shippingFee,
       orderTotal,
       removeFromWishlist,
       searchItem,

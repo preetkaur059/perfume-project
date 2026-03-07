@@ -36,7 +36,7 @@ const OrderSuccess2 = () => {
 
         {/* Success Icon */}
         <div className="flex justify-center mb-2">
-          <FaCheckCircle className="text-lime-300 text-5xl animate-bounce" />
+          <FaCheckCircle className="text-lime-300 text-4xl animate-bounce" />
         </div>
 
         {/* Title */}

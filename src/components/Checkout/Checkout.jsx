@@ -293,7 +293,7 @@ const Checkout = () => {
 
           <div className="flex justify-between mb-4">
             <span>Shipping</span>
-            <span>{shippingFee.toFixed(2)}</span>
+            <span>FREE</span>
           </div>
 
           <div className="flex justify-between text-xl font-bold border-t border-[#222] pt-4">

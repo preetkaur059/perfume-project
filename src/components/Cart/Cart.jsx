@@ -10,7 +10,7 @@ import Heading from "../Heading/Heading";
 
 
 const Cart = () => {
-    const { cart, removeFromCart, quantityIncrement, quantityDecrease, subTotal, shippingFee, orderTotal } = useContext(StoreContext);
+    const { cart, removeFromCart, quantityIncrement, quantityDecrease, subTotal, orderTotal } = useContext(StoreContext);
     const navigate = useNavigate();
 
   return (
@@ -93,7 +93,7 @@ const Cart = () => {
 
           <div className="flex justify-between mb-4 text-lg">
             <span>Shipping</span>
-            <span>{shippingFee.toFixed(2)}</span>
+            <span>FREE</span>
           </div>
 
           <div className="flex justify-between text-xl font-bold border-t border-[#222] pt-4">
