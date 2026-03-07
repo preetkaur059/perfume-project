@@ -5,6 +5,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Autoplay, Navigation } from 'swiper/modules'
+import t1 from '../../assets/Testimonals/t-1.jpg'
+import t2 from '../../assets/Testimonals/t-2.jpg'
+import t3 from '../../assets/Testimonals/t-3.jpg'
+import t4 from '../../assets/Testimonals/t-4.jpg'
+import t5 from '../../assets/Testimonals/t-5.jpg'
 
 const Testimonials = () => {
 
@@ -14,35 +19,35 @@ const Testimonials = () => {
       name: "Sophia Williams",
       review:
         "Zivara perfumes are absolutely amazing! The fragrance lasts all day and feels very luxurious. I always get compliments whenever I wear it.",
-      image: "https://randomuser.me/api/portraits/women/44.jpg",
+      image: t1,
     },
     {
       id: 2,
       name: "James Carter",
       review:
         "I recently bought a perfume from Zivara and I’m in love with the scent. It’s elegant, long-lasting, and perfect for every occasion.",
-      image: "https://randomuser.me/api/portraits/men/32.jpg",
+      image: t2,
     },
     {
       id: 3,
       name: "Emma Thompson",
       review:
         "I absolutely love Zivara perfumes! The fragrance is elegant and long-lasting. Every time I wear it, people ask me which perfume I’m using.",
-      image: "https://randomuser.me/api/portraits/women/65.jpg",
+      image: t3,
     },
     {
       id: 4,
       name: "Daniel Lee",
       review:
         "The packaging and fragrance of Zivara perfumes are beautiful. It smells fresh and sophisticated. Highly recommended!",
-      image: "https://randomuser.me/api/portraits/men/76.jpg",
+      image: t4,
     },
     {
       id: 5,
       name: "Emma Johnson",
       review:
         "I was looking for a long-lasting perfume and Zivara exceeded my expectations. The scent stays for hours and feels very classy.",
-      image: "https://randomuser.me/api/portraits/men/76.jpg",
+      image: t5,
     },
   ];
 
