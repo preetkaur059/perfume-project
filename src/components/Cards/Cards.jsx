@@ -8,11 +8,11 @@ const Cards = ({ product }) => {
     const { wishlist, addToWishlist, addToCart } = useContext(StoreContext);
 
     return (
-        <div className="group bg-[#111] overflow-hidden border border-[#222] 
+        <div className="group md:m-0 m-5 bg-[#111] overflow-hidden border border-[#222] 
                 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-lime-300/20 relative">
 
             {/* Top Icons */}
-            <div className="flex justify-between items-center p-4 absolute top-4 left-2 w-full z-10 
+            <div className="flex justify-between items-center p-2 md:p-4 absolute top-4 left-2 w-full z-10 
                     opacity-0 group-hover:opacity-100 transition duration-300">
 
                 <button
@@ -31,7 +31,7 @@ const Cards = ({ product }) => {
             </div>
 
             {/* Image Section */}
-            <div className=" relative w-full h-62 overflow-hidden">
+            <div className=" relative w-full h-52 md:h-62 overflow-hidden">
                 <img
                     src={product.image}
                     alt={product.name}
@@ -41,14 +41,14 @@ const Cards = ({ product }) => {
 
             {/* Content */}
             <div className="text-center pt-5">
-                <h3 className="text-white text-lg mb-2 tracking-wide">
+                <h3 className="text-white md:text-lg mb-2 tracking-wide">
                     {product.name}
                 </h3>
 
 
                 <p className='flex justify-around'>
-                    <p className="text-[#e2f2b0] text-2xl font-bold mb-4">${product.price.toFixed(2)}</p>
-                    <span className="flex text-yellow-400 mt-1 text-xl gap-1">{Array(product.rating).fill().map((_, i) => (<FaStar key={i} />))} </span>
+                    <p className="text-[#e2f2b0] text-xl md:text-2xl font-bold mb-4">${product.price.toFixed(2)}</p>
+                    <span className="flex text-yellow-400 mt-1 text-lg md:text-xl gap-1">{Array(product.rating).fill().map((_, i) => (<FaStar key={i} />))} </span>
                 </p>
 
 

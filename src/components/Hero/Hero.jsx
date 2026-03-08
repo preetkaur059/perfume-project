@@ -18,9 +18,14 @@ const Hero = () => {
         <div className="min-h-[calc(100vh-14vh)] flex flex-col md:flex-row">
 
           {/* Left Text */}
-          <div className="flex-1 flex items-center">
-            <h1 className="text-white text-3xl md:text-7xl font-serif">
+          <div className="flex-1 hidden md:block flex mt-20 items-center ">
+            <h1 className="text-white text-3xl  md:text-7xl font-serif">
               THE <br/> FRAGRENCE <br/> OF LIFE
+            </h1>
+          </div>
+           <div className="flex-1 block md:hidden mt-3 flex items-start ">
+            <h1 className="text-white text-3xl  md:text-7xl font-serif">
+              THE FRAGRENCE OF LIFE
             </h1>
           </div>
 
@@ -37,7 +42,7 @@ const Hero = () => {
            <div className="flex-1 md:self-end md:mb-35 flex justify-end">
             <div className="w-[400px] h-[150px] scroll-box overflow-y-scroll p-3">
 
-              <p className="text-white text-sm md:text-xl text-right">
+              <p className="text-white hidden md:block text-sm md:text-xl text-right">
                 A timeless fragrance that reflects elegance, confidence, and modern charm, crafted 
                 for individuals who appreciate true luxury. Each note is carefully blended to 
                 create a scent that feels unique, memorable, and expressive. Our perfumes are 

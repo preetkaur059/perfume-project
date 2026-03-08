@@ -2,6 +2,7 @@ import React from "react";
 import { FaTrash, FaShoppingCart } from "react-icons/fa";
 import { useContext } from "react";
 import { StoreContext } from "../../context/StoreContext";
+import { NavLink } from "react-router-dom";
 
 const Wishlist = () => {
 
@@ -18,9 +19,9 @@ const Wishlist = () => {
       {wishlist.length === 0 ? (
         <div className="text-center mt-20">
           <h2 className="text-xl mb-4">Your wishlist is empty 💔</h2>
-          <button className="px-5 py-2 bg-lime-300 text-black rounded-lg font-semibold hover:bg-lime-400 transition">
+          <NavLink to="/Allproducts" className="px-5 py-2 bg-lime-300 text-black rounded-lg font-semibold hover:bg-lime-400 transition">
             Continue Shopping
-          </button>
+          </NavLink>
         </div>
       ) : (
 

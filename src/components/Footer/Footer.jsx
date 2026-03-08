@@ -4,11 +4,11 @@ import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 const Footer = () => {
   return (
     
-    <div className="  bg-black mx-auto text-gray-300 pt-16">
+    <div className="  bg-black mx-auto text-gray-300 pt-10">
 
       {/* Top Border */}
 
-      <div className="flex gap-17 max-w-7xl mx-auto pb-12  grid md:grid-cols-4">
+      <div className="flex gap-17 md:px-0 px-10 mt-10 max-w-7xl mx-auto pb-12 grid-cols-2 grid md:grid-cols-4">
 
         {/* Brand */}
         <div className="">

@@ -6,12 +6,12 @@ import Button from "../Button/Button";
 const OurStory = () => {
   return (
     <section className="bg-[#101010] ">
-      <div className="max-w-[1300px] mx-auto px-4">
+      <div className="max-w-[1300px] mx-auto px-10 md:px-4">
         
         <div className="flex flex-col md:flex-row justify-around items-center">
           
           {/* Image */}
-          <div data-aos="fade-up" className="m-[5rem_2rem]">
+          <div data-aos="fade-up" className="md:m-[5rem_2rem] m-5 ">
             <img
               src={storyimg}
               alt="perfume-image"

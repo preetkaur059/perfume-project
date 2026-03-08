@@ -38,7 +38,7 @@ const SellingProducts = () => {
   return (
     <div className=' bg-black pt-10'>
       <div id='product-section' className="max-w-[1300px] mx-auto">
-        <div data-aos="fade-up"  data-aos-delay="200" className="text-center">
+        <div data-aos="fade-up"  data-aos-delay="200" className=" text-center">
           <Heading highlight="Best Selling Products" />
         </div>
 
@@ -46,7 +46,7 @@ const SellingProducts = () => {
           {categories.map((category) => {
             return (
               <button key={category}
-                className={`transform transition duration-500 hover:scale-105 cursor-pointer px-5 py-2 text-lg
+                className={`transform transition duration-500 hover:scale-105 cursor-pointer px-5 py-2 md:text-lg
                     ${activeTab === category ? 'bg-gradient-to-b from-lime-200 to-lime-300 font-bold  text-black' : 'bg-white font-medium text-black'}`}
                 onClick={() => {
                   setActiveTab(category)
@@ -54,7 +54,7 @@ const SellingProducts = () => {
             )
           })}
         </div>
-        <div className="grid grid-cols-4 gap-10 mt-20">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-10 mt-10 md:mt-20">
           {searchedItems.length === 0 ?
                         <p className='col-span-full text-white text-3xl flex justify-center items-center'>NO PRODUCT FOUND</p>
                         : (renderProducts)}

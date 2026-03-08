@@ -38,7 +38,7 @@ const Category = ({ type }) => {
           <Heading highlight={headingText} />
         </div>
 
-        <div className="grid grid-cols-4 gap-10 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mt-8">
           {filteredProducts.length === 0 ?
             <p className='col-span-full text-white text-3xl flex justify-center items-center'>NO PRODUCT FOUND</p>
             : (renderProduct)}
