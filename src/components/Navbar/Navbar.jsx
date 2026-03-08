@@ -109,14 +109,14 @@ const Navbar = () => {
                 </div>
                 {/* nav action  */}
                 <div className="flex  items-center gap-x-5">
-                    <div className="md:flex hidden  border-lime-300 text-white border-2 rounded-xl">
+                    <div className="md:flex hidden border-lime-300 text-white border-2 rounded-xl">
 
                         {/* search bar  */}
                         <input type="text" name='text' id='text' className='flex-1 h-[5vh] px-3 focus:outline-none'
                             onFocus={handleScroll}
                             onChange={(e) => setSearchItem(e.target.value)}
                             placeholder='Search perfume...' autoComplete='off' />
-                        <button className='h-10 w-10 text-black flex justify-center items-center rounded-xl text-2xl bg-gradient-to-b from-lime-200 to-lime-300 '>
+                        <button className='h-10 w-10 cursor-pointer text-black flex justify-center items-center rounded-xl text-2xl bg-gradient-to-b from-lime-200 to-lime-300 '>
                             <FaSearch className='bg- z-99' />
                         </button>
                     </div>

@@ -3,7 +3,7 @@ import Category from '../Category/Category'
 
 const Allproducts = () => {
   return (
-    <div className="pt-2">
+    <div className="">
       <Category type="All" />
     </div>
   )

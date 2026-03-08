@@ -31,7 +31,7 @@ const Category = ({ type }) => {
 
 
   return (
-    <div className="bg-black pb-5 pt-20">
+    <div className="bg-black pb-3 pt-28">
       <div className="max-w-[1300px] mx-auto">
 
         <div className="text-center">
