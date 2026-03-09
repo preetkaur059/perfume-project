@@ -12,8 +12,8 @@ const Cards = ({ product }) => {
                 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-lime-300/20 relative">
 
             {/* Top Icons */}
-            <div className="flex justify-between items-center p-2 md:p-4 absolute top-4 left-2 w-full z-10 
-                    opacity-0 group-hover:opacity-100 transition duration-300">
+            <div className="flex justify-between items-center p-2 md:p-4 absolute top-2 left-0 px-3 w-full z-10 
+                    opacity-100 md:opacity-0 md:group-hover:opacity-100 transition duration-300">
 
                 <button
                     onClick={() => addToWishlist(product)}
