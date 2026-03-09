@@ -3,6 +3,7 @@ import { FaHeart, FaPlus, FaStar } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { useContext } from "react";
 import { StoreContext } from "../../context/StoreContext";
+import { toast } from "react-toastify";
 
 const Cards = ({ product }) => {
     const { wishlist, addToWishlist, addToCart } = useContext(StoreContext);
@@ -16,14 +17,29 @@ const Cards = ({ product }) => {
                     opacity-100 md:opacity-0 md:group-hover:opacity-100 transition duration-300">
 
                 <button
-                    onClick={() => addToWishlist(product)}
+                    onClick={() => {
+
+                        const isInWishlist = wishlist.some(item => item.id === product.id);
+
+                        addToWishlist(product);
+
+                        if (isInWishlist) {
+                            toast.error("Removed from wishlist 💔");
+                        } else {
+                            toast.success("Added to wishlist ❤️");
+                        }
+
+                    }}
                     className={`text-xl hover:scale-110 cursor-pointer hover:text-lime-400 transition 
         ${wishlist.some(item => item.id === product.id) ? 'text-lime-300' : 'text-white'}`}>
                     <FaHeart />
                 </button>
 
                 <button
-                    onClick={() => addToCart(product)}
+                    onClick={() => {
+                        addToCart(product);
+                        toast.success("Item added to cart 🛒");
+                    }}
                     className="bg-lime-200 text-black cursor-pointer p-2 mr-3 border-2 border-[#f5f5dc]
                    hover:bg-[#efc3c5] hover:scale-110 transition">
                     <FaPlus />
@@ -31,13 +47,15 @@ const Cards = ({ product }) => {
             </div>
 
             {/* Image Section */}
-            <div className=" relative w-full h-52 md:h-62 overflow-hidden">
-                <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-full object-cover hover:scale-110 transition duration-700"
-                />
-            </div>
+            <Link to={`/product/${product.id}`}>
+                <div className=" relative w-full h-52 md:h-62 overflow-hidden">
+                    <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-full object-cover hover:scale-110 transition duration-700"
+                    />
+                </div>
+            </Link>
 
             {/* Content */}
             <div className="text-center pt-5">

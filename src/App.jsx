@@ -17,6 +17,9 @@ import Men from './components/Categories/Men'
 import Women from './components/Categories/Women'
 import Unisex from './components/Categories/Unisex'
 import Contact from './components/Contact/Contact'
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import ProductDetails from './components/ProductDetails/ProductDetails'
 
 
 const App = () => {
@@ -79,13 +82,27 @@ const App = () => {
             path: '/Contact',
             element: <Contact />,
           },
-          
+          {
+            path: '/product/:id',
+            element: <ProductDetails />,
+          }
+
         ]
     }
   ])
   return (
     <StoreProvider>
       <RouterProvider router={router} />
+
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={true}
+        closeOnClick
+        pauseOnHover
+        theme="dark"
+      />
     </StoreProvider>
   )
 }

@@ -3,11 +3,12 @@ import { FaTrash, FaShoppingCart } from "react-icons/fa";
 import { useContext } from "react";
 import { StoreContext } from "../../context/StoreContext";
 import { NavLink } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Wishlist = () => {
 
   const { wishlist, addToCart, removeFromWishlist } = useContext(StoreContext);
-  
+
   return (
     <div className="min-h-screen pt-30 bg-[#0d0d0d] text-white px-6 md:px-16 py-10">
 
@@ -39,11 +40,14 @@ const Wishlist = () => {
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="w-full h-42 object-cover hover:scale-110 transition duration-500"/>
+                  className="w-full h-42 object-cover hover:scale-110 transition duration-500" />
 
                 {/* Remove Icon */}
                 <button
-                  onClick={() => removeFromWishlist(item.id)}
+                  onClick={() => {
+                    removeFromWishlist(item.id);
+                    toast.error("Removed from wishlist 💔");
+                  }}
                   className="absolute cursor-pointer top-2 right-2 bg-black/70 p-1.5 rounded-full text-red-400 hover:text-red-600 transition">
                   <FaTrash size={14} />
                 </button>
@@ -61,7 +65,10 @@ const Wishlist = () => {
 
                 {/* Add To Cart Button */}
                 <button
-                  onClick={() => addToCart(item)}
+                  onClick={() => {
+                    addToCart(item);
+                    toast.success("Item added to cart 🛒");
+                  }}
                   className="w-full cursor-pointer py-2 rounded-md bg-gradient-to-r 
                              from-lime-200 to-lime-300 text-black  font-semibold
                              hover:from-lime-300 hover:to-lime-400 
