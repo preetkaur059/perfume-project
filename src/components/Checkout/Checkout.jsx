@@ -287,7 +287,7 @@ const Checkout = () => {
           <div className="flex justify-between mb-4">
             <span>Subtotal</span>
             <span className="text-lime-300 font-bold">
-              {subTotal.toFixed(2)}
+              ${subTotal.toFixed(2)}
             </span>
           </div>
 
@@ -299,7 +299,7 @@ const Checkout = () => {
           <div className="flex justify-between text-xl font-bold border-t border-[#222] pt-4">
             <span>Total</span>
             <span className="text-lime-300">
-              {orderTotal.toFixed(2)}
+              ${orderTotal.toFixed(2)}
             </span>
           </div>
 
