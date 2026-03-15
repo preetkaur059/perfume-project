@@ -62,7 +62,7 @@ const OrderSuccess2 = () => {
           </div>
 
           <div className="flex justify-between">
-            <span className="text-white">Customer</span>
+            <span className="text-white">Name</span>
             <span className="text-white">{order.customer.firstName}</span>
           </div>
 

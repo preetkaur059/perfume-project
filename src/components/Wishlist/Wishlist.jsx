@@ -40,7 +40,7 @@ const Wishlist = () => {
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="w-full h-42 object-cover hover:scale-110 transition duration-500" />
+                  className="w-full h-62 object-cover hover:scale-110 transition duration-500" />
 
                 {/* Remove Icon */}
                 <button

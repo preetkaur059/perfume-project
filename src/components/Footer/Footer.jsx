@@ -1,10 +1,11 @@
 import React from "react";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Footer = () => {
   return (
     
-    <div className="  bg-black mx-auto text-gray-300 pt-10">
+    <div className="  bg-black mx-auto text-gray-300 pt-1">
 
       {/* Top Border */}
 
@@ -32,18 +33,19 @@ const Footer = () => {
           </h3>
 
           <ul className="space-y-3 ">
-            <li className="hover:text-lime-200 hover:translate-x-1 transition cursor-pointer">
+            <NavLink className="hover:text-lime-200 hover:translate-x-1 block transition cursor-pointer">
               Home
-            </li>
-            <li className="hover:text-lime-200 hover:translate-x-1 transition cursor-pointer">
-              About Us
-            </li>
-            <li className="hover:text-lime-200 hover:translate-x-1 transition cursor-pointer">
-              Contact Us
-            </li>
-            <li className="hover:text-lime-200 hover:translate-x-1 transition cursor-pointer">
+            </NavLink>
+            <NavLink to="/Allproducts"
+             className="hover:text-lime-200 hover:translate-x-1 block transition cursor-pointer">
               All Products
-            </li>
+            </NavLink>
+            <NavLink to='/' className="hover:text-lime-200 hover:translate-x-1 block transition cursor-pointer">
+              Categories
+            </NavLink>
+            <NavLink to='/contact' className="hover:text-lime-200 hover:translate-x-1 block transition cursor-pointer">
+              Contact Us
+            </NavLink>
           </ul>
         </div>
 
@@ -55,9 +57,9 @@ const Footer = () => {
           </h3>
 
           <div className="space-y-3 text-gray-400">
-            <p>Email: info@zivara.com</p>
-            <p>Phone: +91 93652 56321</p>
-            <p>Address: 123 Street, Punjab, India</p>
+            <p>Email: support@zivara.com</p>
+            <p>Phone: +91 98765 43210</p>
+            <p>Zivara Fragrance Store Ludhiana, Punjab</p>
           </div>
         </div>
 

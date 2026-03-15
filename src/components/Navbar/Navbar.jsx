@@ -114,7 +114,7 @@ const Navbar = () => {
 
                     </div>
                     <NavLink to="/Contact" className={({ isActive }) => `font-medium tracking-wider ${isActive ? "text-lime-200" : "text-white hover:text-lime-200"}`} >
-                        Contact
+                        Contact Us
                     </NavLink>
 
                 </div>
