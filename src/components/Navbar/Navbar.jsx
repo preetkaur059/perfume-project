@@ -59,7 +59,7 @@ const Navbar = () => {
 
     return (
         <header className={` z-99 fixed top-5 left-0 right-0  `}>
-            <nav className={`w-[95%] max-w-[1400px] backdrop-blur-3xl rounded-lg bg-white/5 border border-white/10  flex mx-auto md:h-[12vh] h-[10vh] px-10 items-center justify-between`}>
+            <nav className={`w-[95%] max-w-[1400px] backdrop-blur-3xl rounded-lg bg-white/5 border border-white/10  flex mx-auto md:h-[12vh] h-[10vh] md:px-10 px-5 items-center justify-between`}>
                 <div className="">
                     <NavLink to="/" className='text-3xl text-white font-bold'>ZIVARA</NavLink>
                 </div>

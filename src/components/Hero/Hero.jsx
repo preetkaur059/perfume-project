@@ -32,9 +32,9 @@ const Hero = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            <h1 className="text-white text-3xl mx-auto md:text-7xl font-serif">
+            <h2 className="text-white text-3xl mx-auto md:text-7xl font-serif">
               THE FRAGRENCE OF LIFE
-            </h1>
+            </h2>
           </motion.div>
 
           {/* Center Image (optional) */}
