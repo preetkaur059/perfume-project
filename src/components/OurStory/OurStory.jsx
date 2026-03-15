@@ -13,7 +13,7 @@ const OurStory = () => {
 
           {/* Image */}
           <motion.div
-            className="md:m-[5rem_2rem] m-5"
+            className="md:m-[5rem_2rem] m-2"
             initial={{ x: -80, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}

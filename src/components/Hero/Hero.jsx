@@ -27,12 +27,12 @@ const Hero = () => {
 
           {/* Mobile Heading */}
           <motion.div
-            className="flex-1 block md:hidden mt-3 flex items-start"
+            className="flex-1 block md:hidden mt-5 flex items-start"
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            <h1 className="text-white text-3xl md:text-7xl font-serif">
+            <h1 className="text-white text-3xl mx-auto md:text-7xl font-serif">
               THE FRAGRENCE OF LIFE
             </h1>
           </motion.div>
@@ -60,8 +60,8 @@ const Hero = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            <div className="w-[400px] h-[150px] scroll-box overflow-y-scroll p-3">
-              <p className="text-white hidden md:block text-sm md:text-xl text-right">
+            <div className="w-[400px] h-[150px] hidden md:block scroll-box overflow-y-scroll p-3">
+              <p className="text-white text-sm md:text-xl text-right">
                 A timeless fragrance that reflects elegance, confidence, and modern charm, crafted 
                 for individuals who appreciate true luxury. Each note is carefully blended to 
                 create a scent that feels unique, memorable, and expressive. Our perfumes are 
