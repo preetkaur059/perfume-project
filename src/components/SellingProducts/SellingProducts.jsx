@@ -25,14 +25,14 @@ const SellingProducts = () => {
   // Render Cards 
   const renderProducts = searchedItems.slice(0, 8).map((product, index) => (
     <div key={product.id}
-            data-aos="fade-up"
-            data-aos-delay={index * 200}
-            >
+      data-aos="fade-up"
+      data-aos-delay={index * 200}
+    >
     <Cards
       key={product.id}
       product={product}
       addToCart={addToCart} />
-      </div>   
+    </div>   
   ))
 
   return (
@@ -65,7 +65,7 @@ const SellingProducts = () => {
             Explore Collection →</button>
         </div>
       </div>
-    </div>
+    </div>  
   )
 }
 

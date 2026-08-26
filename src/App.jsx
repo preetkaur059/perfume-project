@@ -20,7 +20,9 @@ import Contact from './components/Contact/Contact'
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ProductDetails from './components/ProductDetails/ProductDetails'
-
+import Login from './components/auth/Login'
+import Signup from './components/auth/SignUp'
+import ForgotPassword from './components/auth/ForgotPassword'
 
 const App = () => {
 
@@ -45,6 +47,18 @@ const App = () => {
           {
             path: '/wishlist',
             element: <Wishlist />,
+          },
+          {
+            path: '/login',
+            element: <Login />,
+          },
+          {
+            path: '/signup',
+            element: <Signup />,
+          },
+          {
+            path: '/forgot-password',
+            element: <ForgotPassword/>,
           },
           {
             path: '/checkout',

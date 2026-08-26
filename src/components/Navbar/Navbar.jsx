@@ -133,7 +133,7 @@ const Navbar = () => {
                     </div>
 
                     {/* wishlist */}
-                    <Link to='/wishlist' className='text-white relative text-3xl'>
+                    <Link to='/wishlist' className='text-white relative text-3xl hover:text-lime-200'>
                         <IoHeartSharp />
                         {
                             wishlist.length > 0 && (
@@ -142,7 +142,7 @@ const Navbar = () => {
                     </Link>
 
                     {/* cart */}
-                    <Link to='/cart' className='text-white relative text-3xl'>
+                    <Link to='/cart' className='text-white relative text-3xl hover:text-lime-200'>
                         <FaShoppingCart />
                         {
                             cartCount > 0 &&
@@ -151,9 +151,11 @@ const Navbar = () => {
                     </Link>
 
                     {/* user */}
-                    {/* <button className='text-zinc-800 text-2xl'>
+                     <Link to="/login"
+                        className="hidden md:flex text-white text-3xl hover:text-lime-200 
+                        transition duration-300 cursor-pointer">
                         <FaUserAlt />
-                    </button> */}
+                    </Link> 
                     <button onClick={() => setShowMenu(!showMenu)} className={`text-white text-2xl md:hidden ${showMenu ? '<BiMenuAltRight />' : '<GiHamburgerMenu />'}`}>
                         {showMenu ? <FaTimes /> : <FaBars />}
                     </button>

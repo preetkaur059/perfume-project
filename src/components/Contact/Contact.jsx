@@ -1,8 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import Heading from "../Heading/Heading";
 
 const Contact = () => {
+  const [username, setUsername] = useState("")
+  const [email, setEmail] = useState("")
+  const [msg, setMsg] = useState("")
+
+  const [count, setCount] =useState(1)  
+
+//    const increment = ()=>{
+// setCount((previous)=>previous+1)
+//    }
+  // const user1 = {
+  //   name: "Param",
+  //   class: "BCA",
+  //   semester: 4  }
+
+  // const user2 = {
+  //   ...user1, semester:6
+  // }
+  
+
+
+  const handleSubmit = ()=>{
+    const payload = {
+      fullname:username, 
+      email,
+      query: msg
+    }
+    
+    console.log('payload: ', payload);
+
+  }
+  
+  console.log('username: ', username);
   return (
     <div className="bg-black text-white pt-25 pb-20">
       <div className="max-w-[1200px] mx-auto px-6">
@@ -61,18 +93,21 @@ const Contact = () => {
             <input
               type="text"
               placeholder="Your Name"
+              onChange={(e)=>setUsername(e.target.value)}
               className="w-full p-3 bg-black border border-[#333] rounded outline-none focus:border-lime-200"
             />
 
             <input
               type="email"
               placeholder="Your Email"
+              onChange={(e) => setEmail(e.target.value)}
               className="w-full p-3 bg-black border border-[#333] rounded outline-none focus:border-lime-200"
             />
 
             <textarea
               rows="5"
               placeholder="Your Message"
+              onChange={(e) => setMsg(e.target.value)}
               className="w-full p-3 bg-black border border-[#333] rounded outline-none focus:border-lime-200"
             ></textarea>
 
@@ -90,3 +125,19 @@ const Contact = () => {
 };
 
 export default Contact;
+
+// const [formData, setFormData] = useState({
+//   name: "",
+//   email: ""
+// });
+
+// <input
+//   type="text"
+//   value={formData.name}
+//   onChange={(e) =>
+//     setFormData({
+//       ...formData,
+//       name: e.target.value
+//     })
+//   }
+// />

@@ -42,7 +42,7 @@ import dior from '../../assets/dior.jpg'
 
 const products = [
   {
-     id: 1,
+    id: 1,
     name: "Maison Francis Kurkdjian",
     price: 112,
     category: "Men",
